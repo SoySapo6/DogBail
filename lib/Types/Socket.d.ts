@@ -116,4 +116,6 @@ export type SocketConfig = {
     /** cached group metadata, use to prevent redundant requests to WA & speed up msg sending */
     cachedGroupMetadata: (jid: string) => Promise<GroupMetadata | undefined>;
     makeSignalRepository: (auth: SignalAuthState) => SignalRepository;
+    /** delay in ms to wait between sending messages */
+    messageSendDelay: number;
 };
